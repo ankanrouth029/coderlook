@@ -12,6 +12,6 @@ function passValidate() {
         alert("Password must have at least one uppercase letter, one lowercase letter, and one alphanumeric character.");
     } else {
         alert("Login Successful!");
-        window.open("https://www.google.com", "_blank");
+        window.open("dash.html");
     }
 }
