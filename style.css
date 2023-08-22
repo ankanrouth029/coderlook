@@ -1,5 +1,5 @@
 body {
-    background-color: #ddd;
+    background-color: #f5f5f5;
     font-family: 'Font Name', sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@ label {
     position: absolute;
     top: 72px;
     left: 50%;
-    background-color: #4CAF50;
+    background-color: ##2828bb;
     transform: translateX(-50%);
     text-align: center;
     padding-left: 10px;
