@@ -1,133 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            background-color: #f5f5f5;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background-color: #f5f5f5;
+      }
 
-        .emp {
-            margin: 10px;
-            padding: 10px;
-            display: inline-block;
-            width: 200px;
-            background-color: #f5f5f5;
-            border-radius: 6px;
-            font-size: 20px;
-            font-weight: 100;
-            align-items: center;
-        }
+      .table-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
 
-        .emp img {
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+      table {
+        margin: 30px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+        font-size: medium;
+        border-collapse: collapse;
+        width: 100%;
+      }
 
-        .main-content {
-            margin: 70px;
-            width: 700px;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            font-size: 50px;
-            font-weight: 400;
-            border-radius: 6px;
-            background-color: #ffffff;
-        }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
 
-        
-        
-        .navbar {
-            background-color: #2828bb;
-            color: white;
-            width: 200px;
-            padding: 20px;
-            font-family: 'Poppins', sans-serif;
-            height: 100vh;
-        }
-        
-        .navbar h1 {
-            margin-bottom: 20px;
-            
-        }
-        
-        .nav-links ul {
-            list-style: none;
-            padding: 0;
-            
-        }
-        
-        .nav-links li {
-            margin-bottom: 15px;
-            box-sizing: border-box;
-            padding-top: 10px;
-            padding-left: 3px;
-            padding-bottom: 10px;
-            border-radius: 5px;
-            transition: 0.2s;
-        }
+      th {
+        background-color: #f2f2f2;
+      }
 
-        .nav-links li:hover {
-            margin-bottom: 15px;
-            box-sizing: border-box;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 6px;
-            border-radius: 5px;
-            background-color: #2852bb;
-            transition: 0.2s;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-        }
-        
-        .main-content {
-            flex-grow: 1;
-            padding: 20px;
-        }
+      th,
+      td {
+        width: calc(100% / 3);
+      }
+
+      .emp {
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        background-color: #ffffff;
+        border: 1px solid #b1b1b1;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: left;
+      }
+
+      .emp img {
+        border-radius: 50%;
+        margin: 20px;
+      }
+
+      .main-content {
+        margin: 70px;
+        width: 700px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        border-radius: 6px;
+        background-color: #ffffff;
+      }
+
+      .navbar {
+        background-color: #2828bb;
+        color: white;
+        width: 200px;
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        height: 100vh;
+      }
+
+      .navbar h1 {
+        margin-bottom: 20px;
+      }
+
+      .nav-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav-links li {
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        padding-top: 10px;
+        padding-left: 3px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+        transition: 0.2s;
+      }
+
+      .nav-links li:hover {
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 6px;
+        border-radius: 5px;
+        background-color: #2852bb;
+        transition: 0.2s;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .main-content {
+        flex-grow: 1;
+        padding: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="navbar">
-        <h1>Dashboard</h1>
-        <div class="nav-links">
-            <ul>
-                <li><a href="#" id="homeLink">Home</a></li>
-                <li><a href="#" id="aboutLink">About Us</a></li>
-            </ul>
-        </div>
+      <h1>Dashboard</h1>
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="#" id="homeLink">Home</a>
+          </li>
+          <li>
+            <a href="#" id="aboutLink">About Us</a>
+          </li>
+        </ul>
+      </div>
     </div>
-
     <div class="main-content" id="Home">
-        <p>Welcome to Coderlook!</p>
+      <p>Welcome to Coderlook!</p>
     </div>
-
     <div class="main-content" id="About" style="display: none; ">
-        <p>About Us</p>
-        <div class="emp"><img width="120" height="120"><p>Paul Allen</p></div>
-        <div class="emp"><img width="120" height="120"><p>John Doe</p></div>
-        <div class="emp"><img width="120" height="120"><p>Alice John</p></div>
+      <p>About Us</p>
+      <div class="emp">
+        <img width="120" height="120">
+        <div class="org-detail">
+          <p>
+            <strong>Organisation: </strong>Coderlook
+          </p>
+          <p>
+            <strong>Address: </strong>Kolkata
+          </p>
+          <p>
+            <strong>Phone: </strong>
+          </p>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Job Title</th>
+            <th>Email</th>
+          </tr>
+          <tr>
+            <td>Alfred Futter</td>
+            <td>Developer</td>
+            <td>afutter@coderlook.com</td>
+          </tr>
+          <tr>
+            <td>John Doe</td>
+            <td>IT Admin</td>
+            <td>jdoe@coderlook.com</td>
+          </tr>
+        </table>
+      </div>
     </div>
-
     <script>
-        document.getElementById("homeLink").addEventListener("click", function() {
-            document.getElementById("Home").style.display = "block";
-            document.getElementById("About").style.display = "none";
-        });
-
-        document.getElementById("aboutLink").addEventListener("click", function() {
-            document.getElementById("About").style.display = "block";
-            document.getElementById("Home").style.display = "none";
-        });
+      document.getElementById("homeLink").addEventListener("click", function() {
+        document.getElementById("Home").style.display = "block";
+        document.getElementById("About").style.display = "none";
+      });
+      document.getElementById("aboutLink").addEventListener("click", function() {
+        document.getElementById("About").style.display = "block";
+        document.getElementById("Home").style.display = "none";
+      });
     </script>
-</body>
+  </body>
 </html>
-
