@@ -12,7 +12,6 @@
         display: flex;
         background-color: #f5f5f5;
       }
-
       .table-container {
         display: flex;
         justify-content: center;
@@ -44,6 +43,8 @@
       td {
         width: calc(100% / 3);
       }
+
+      
 
       .emp {
         margin: 10px;
@@ -157,30 +158,55 @@
         </div>
       </div>
       <div class="table-container">
-        <table>
+        <table id="employeeTable">
           <tr>
             <th>Name</th>
             <th>Job Title</th>
             <th>Email</th>
           </tr>
-          <tr>
-            <td>Alfred Futter</td>
-            <td>Developer</td>
-            <td>afutter@coderlook.com</td>
-          </tr>
-          <tr>
-            <td>John Doe</td>
-            <td>IT Admin</td>
-            <td>jdoe@coderlook.com</td>
-          </tr>
         </table>
       </div>
     </div>
     <script>
+      const jsonData = [
+        {
+          "Name": "Alfred Futter",
+          "Job Title": "Developer",
+          "Email": "afutter@coderlook.com"
+        },
+        {
+          "Name": "John Doe",
+          "Job Title": "IT Admin",
+          "Email": "jdoe@coderlook.com"
+        },
+        {
+          "Name": "Paul Allen",
+          "Job Title": "Manager",
+          "Email": "pallen@coderlook.com"
+        }
+      ];
+    
+      function createTable(data) {
+        const table = document.getElementById('employeeTable');
+    
+        for (const item of data) {
+          const dataRow = document.createElement('tr');
+          for (const key in item) {
+            const dataCell = document.createElement('td');
+            dataCell.textContent = item[key];
+            dataRow.appendChild(dataCell);
+          }
+          table.appendChild(dataRow);
+        }
+      }
+    
+      createTable(jsonData);
+    
       document.getElementById("homeLink").addEventListener("click", function() {
         document.getElementById("Home").style.display = "block";
         document.getElementById("About").style.display = "none";
       });
+    
       document.getElementById("aboutLink").addEventListener("click", function() {
         document.getElementById("About").style.display = "block";
         document.getElementById("Home").style.display = "none";
